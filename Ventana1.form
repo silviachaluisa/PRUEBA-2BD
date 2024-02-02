@@ -124,6 +124,7 @@
           </grid>
         </constraints>
         <properties>
+          <text value=""/>
           <toolTipText value="Ingrese la clave"/>
         </properties>
       </component>
