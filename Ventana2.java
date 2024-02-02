@@ -6,4 +6,5 @@ public class Ventana2 {
     private JRadioButton retiroRadioButton;
     private JRadioButton depositoRadioButton;
     private JRadioButton salirRadioButton;
+    JPanel Ventana2;
 }
