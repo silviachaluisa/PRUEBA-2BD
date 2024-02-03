@@ -3,21 +3,19 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Ventana4 {
-    JPanel Ventan4;
+    JPanel Ventana4;
+    private JLabel titulo;
     private JButton BotonMenu1;
+    private JLabel mostrarsaldo;
 
-    public Ventana4() {
+
+    public Ventana4(Datos_bancarios info) {
+        mostrarsaldo.setText("Saldo disponible: "+info.getsaldo());
         BotonMenu1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                JFrame ventana1=new JFrame("Saldo de tu cuenta");
-                ventana1.setContentPane(new Ventana2().Ventana2);
-                ventana1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                ventana1.setSize(300,300);
-                ventana1.setVisible(true);
-
-
+                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(Ventana4.this.Ventana4); // Obtener el JFrame de la ventana actual
+                frame.dispose(); // Cerrar la ventana actual con el JFrame obtenido
             }
         });
     }

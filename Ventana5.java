@@ -19,8 +19,20 @@ public class Ventana5 {
     private JButton borrarButton;
     private JButton menúButton;
     private JButton button1;
+    private Datos_bancarios db;
+    private double saldo_disponible;
 
-    public Ventana5() {
+    public Ventana5(Datos_bancarios info) {
+        db=info;
+        TXF1.setEditable(false);
+        this.saldo_disponible=info.getsaldo();
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String Monto = TXF1.getText(); // Obtener la cantidad ingresada
+                TXF1.setText(Monto+"."); // Setear el texto del JTextField como monto y el numero del boton seleccionado
+            }
+        });
         a1Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -104,11 +116,8 @@ public class Ventana5 {
         menúButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame ventana1=new JFrame("Retiro de tu cuente");
-                ventana1.setContentPane(new Ventana2().Ventana2);
-                ventana1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                ventana1.setSize(300,300);
-                ventana1.setVisible(true);
+                JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(Ventana5.this.Ventana5); // Obtener el JFrame de la ventana actual
+                frame.dispose(); // Cerrar la ventana actual con el JFrame obtenido
             }
         });
         borrarButton.addActionListener(new ActionListener() {
@@ -118,6 +127,34 @@ public class Ventana5 {
                 if (!currentText.isEmpty()) { // Verifica si hay al menos un carácter para borrar
                     String newText = currentText.substring(0, currentText.length() - 1); // Obtiene una subcadena sin el último carácter
                     TXF1.setText(newText); // Establece la nueva cadena como el nuevo texto
+                }
+            }
+        });
+        enterButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String Monto = TXF1.getText();
+                Double monto_ingresado;
+                if (!Monto.isEmpty()) { // Verifica si hay al menos un carácter para borrar
+                    try  {
+                        monto_ingresado=Double.parseDouble(Monto);
+                        if (monto_ingresado<=saldo_disponible)
+                        {
+                            db.setSaldo(saldo_disponible-monto_ingresado);
+                            JOptionPane.showMessageDialog(Ventana5, "El monto ingresado ha sido retirado con exito!", "Transaccion exitosa", JOptionPane.INFORMATION_MESSAGE);
+                        }
+                        else
+                        {
+                            JOptionPane.showMessageDialog(Ventana5, "El saldo de tu cuenta es menor al que\ndeseas retirar!", "Saldo insuficiente", JOptionPane.ERROR_MESSAGE);
+                        }
+                    }
+                    catch (NumberFormatException n) {
+                        JOptionPane.showMessageDialog(Ventana5, "Ingrese un valor valido antes de continuar\ncon el proceso de retiro!", "Valor invalido o incompleto", JOptionPane.ERROR_MESSAGE);
+                    }
+                }
+                else
+                {
+                    JOptionPane.showMessageDialog(Ventana5, "Ingrese un valor antes de realizar el retiro!", "Monto invalido", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });

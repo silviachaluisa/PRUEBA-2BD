@@ -53,17 +53,17 @@
           <text value="Deposito"/>
         </properties>
       </component>
-      <component id="c4776" class="javax.swing.JRadioButton" binding="SALIRRadioButton" default-binding="true">
+      <component id="c4776" class="javax.swing.JRadioButton" binding="salirRadioButton" default-binding="true">
         <constraints>
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-4964575"/>
-          <enabled value="false"/>
+          <enabled value="true"/>
           <foreground color="-15857907"/>
           <hideActionText value="false"/>
-          <selected value="true"/>
-          <text value="SALIR"/>
+          <selected value="false"/>
+          <text value="Salir"/>
         </properties>
       </component>
     </children>

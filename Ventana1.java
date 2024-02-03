@@ -17,8 +17,10 @@ public class Ventana1 {
     private JButton Boton11;
     private JPasswordField PSW1;
     private JButton borrarButton;
+    Datos_bancarios datos;
 
     public Ventana1() {
+        datos=new Datos_bancarios("202121334", 1000);
         PSW1.setEditable(false); // Esto evita que el usuario puedda editar el campo de la contraseña por teclado
         Boton1.addActionListener(new ActionListener() {
             @Override
@@ -94,18 +96,22 @@ public class Ventana1 {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String credencial = new String (PSW1.getPassword());
-                if (credencial.equals("202121334"))
+                if (credencial.equals(datos.getClaveAcceso()))
                 {
                     JOptionPane.showMessageDialog(Bienvenido, "Acceso correcto", "Credenciales Validas!", JOptionPane.INFORMATION_MESSAGE);
-                    JFrame ventana=new JFrame("Transacciones!");
+                    JFrame inicio = (JFrame) SwingUtilities.getWindowAncestor(Ventana1.this.Bienvenido); // Obtener el JFrame de la ventana actual
+                    inicio.dispose(); // Cerrar la ventana actual con el JFrame obtenido
+                    JFrame ventana=new JFrame("Menu de acciones");
+                    ventana.setResizable(false); // Evitar que la ventana se pueda cambiar de tamaño
                     ventana.setSize(300, 300);
-                    ventana.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                    ventana.setContentPane(new Ventana2().Ventana2);
+                    ventana.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE); // Para no permitir el cierre de la ventana
+                    ventana.setContentPane(new Ventana2(datos).Ventana2);
                     ventana.setVisible(true);
                 }
                 else
                 {
                     JOptionPane.showMessageDialog(Bienvenido, "Acceso denegado!", "Credenciales invalidas", JOptionPane.ERROR_MESSAGE);
+                    PSW1.setText("");
                 }
             }
         });
