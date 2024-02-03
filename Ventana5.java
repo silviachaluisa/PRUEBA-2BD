@@ -111,6 +111,16 @@ public class Ventana5 {
                 ventana1.setVisible(true);
             }
         });
+        borrarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String currentText = TXF1.getText();
+                if (!currentText.isEmpty()) { // Verifica si hay al menos un carácter para borrar
+                    String newText = currentText.substring(0, currentText.length() - 1); // Obtiene una subcadena sin el último carácter
+                    TXF1.setText(newText); // Establece la nueva cadena como el nuevo texto
+                }
+            }
+        });
     }
 
     private void createUIComponents() {

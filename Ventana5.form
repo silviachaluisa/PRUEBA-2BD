@@ -17,7 +17,9 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <toolTipText value="Cantidad"/>
+        </properties>
       </component>
       <component id="7af" class="javax.swing.JButton" binding="a3Button" default-binding="true">
         <constraints>

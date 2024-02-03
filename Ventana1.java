@@ -109,5 +109,18 @@ public class Ventana1 {
                 }
             }
         });
+        borrarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                char[] passwordChars = PSW1.getPassword();
+                if (passwordChars.length > 0) { // Verificar si hay al menos un carácter para borrar
+                    char[] newPasswordChars = new char[passwordChars.length - 1]; // Crear un nuevo array sin el último carácter
+                    System.arraycopy(passwordChars, 0, newPasswordChars, 0, newPasswordChars.length);
+                    PSW1.setText(new String(newPasswordChars)); // Establecer el nuevo array como la nueva contraseña
+                }
+               //PSW1.setText(""); //Borrar toda la contraseña escrita
+
+            }
+        });
     }
 }
