@@ -100,6 +100,17 @@ public class Ventana5 {
                 TXF1.setText(Monto+"0"); // Setear el texto del JTextField como monto y el numero del boton seleccionado
             }
         });
+
+        menúButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame ventana1=new JFrame("Retiro de tu cuente");
+                ventana1.setContentPane(new Ventana2().Ventana2);
+                ventana1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                ventana1.setSize(300,300);
+                ventana1.setVisible(true);
+            }
+        });
     }
 
     private void createUIComponents() {

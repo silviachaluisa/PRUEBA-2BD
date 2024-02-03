@@ -17,7 +17,7 @@ public class Ventana2 {
             public void actionPerformed(ActionEvent e) {
                 JFrame saldo = new JFrame("Saldo de tu cuenta");
                 saldo.setSize(300, 300);
-                saldo.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                saldo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 saldo.setContentPane(new Ventana4().Ventan4);
                 saldo.setVisible(true);
             }
@@ -26,7 +26,7 @@ public class Ventana2 {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame retiro = new JFrame("Retirar saldo de tu cuenta");
-                retiro.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                retiro.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 retiro.setSize(300, 300);
                 retiro.setContentPane(new Ventana5().Ventana5);
                 retiro.setVisible(true);

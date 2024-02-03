@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Ventana6 {
     private JPanel Ventana6;
@@ -17,4 +19,18 @@ public class Ventana6 {
     private JButton button1;
     private JButton menuButton;
     private JButton borrarButton;
+
+    public Ventana6() {
+
+        menuButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame ventana1=new JFrame("Retiro de tu cuenta");
+                ventana1.setContentPane(new Ventana2().Ventana2);
+                ventana1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                ventana1.setSize(300,300);
+                ventana1.setVisible(true);
+            }
+        });
+    }
 }

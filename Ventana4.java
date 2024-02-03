@@ -11,11 +11,11 @@ public class Ventana4 {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                JFrame ventana4=new JFrame("Menu");
-                ventana4.setContentPane(new Ventana4().Ventan4);
-                ventana4.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-                ventana4.setSize(300,300);
-                ventana4.setVisible(true);
+                JFrame ventana1=new JFrame("Saldo de tu cuenta");
+                ventana1.setContentPane(new Ventana2().Ventana2);
+                ventana1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                ventana1.setSize(300,300);
+                ventana1.setVisible(true);
 
 
             }
