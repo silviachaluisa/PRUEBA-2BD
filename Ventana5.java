@@ -16,6 +16,9 @@ public class Ventana5 {
     private JButton a8Button;
     private JButton enterButton;
     JPanel Ventana5;
+    private JButton borrarButton;
+    private JButton menúButton;
+    private JButton button1;
 
     public Ventana5() {
         a1Button.addActionListener(new ActionListener() {
@@ -97,5 +100,9 @@ public class Ventana5 {
                 TXF1.setText(Monto+"0"); // Setear el texto del JTextField como monto y el numero del boton seleccionado
             }
         });
+    }
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
     }
 }

@@ -14,4 +14,7 @@ public class Ventana6 {
     private JButton a2Button;
     private JButton a5Button;
     private JButton a8Button;
+    private JButton button1;
+    private JButton menuButton;
+    private JButton borrarButton;
 }

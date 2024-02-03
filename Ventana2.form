@@ -5,7 +5,11 @@
     <constraints>
       <xy x="20" y="20" width="1147" height="832"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-4935660"/>
+      <enabled value="false"/>
+      <preferredSize width="300" height="300"/>
+    </properties>
     <border type="none"/>
     <children>
       <component id="8e138" class="javax.swing.JLabel" binding="titulo">
@@ -13,6 +17,8 @@
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-401123"/>
+          <font name="Yu Gothic UI Semibold" size="20" style="1"/>
           <text value="Transacción a realizar:"/>
         </properties>
       </component>
@@ -21,6 +27,8 @@
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-13323233"/>
+          <font name="Inter" size="16" style="1"/>
           <text value="Ver Saldo"/>
         </properties>
       </component>
@@ -29,6 +37,9 @@
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-13323233"/>
+          <font name="Inter" size="16" style="1"/>
+          <hideActionText value="true"/>
           <text value="Retiro"/>
         </properties>
       </component>
@@ -37,15 +48,22 @@
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-13323233"/>
+          <font name="Inter" size="16" style="0"/>
           <text value="Deposito"/>
         </properties>
       </component>
-      <component id="c4776" class="javax.swing.JRadioButton" binding="salirRadioButton" default-binding="true">
+      <component id="c4776" class="javax.swing.JRadioButton" binding="SALIRRadioButton" default-binding="true">
         <constraints>
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Salir"/>
+          <background color="-4964575"/>
+          <enabled value="false"/>
+          <foreground color="-15857907"/>
+          <hideActionText value="false"/>
+          <selected value="true"/>
+          <text value="SALIR"/>
         </properties>
       </component>
     </children>
