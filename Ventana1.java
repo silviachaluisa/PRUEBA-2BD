@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.SQLOutput;
 
 public class Ventana1 {
     JPanel Bienvenido;
@@ -17,6 +16,7 @@ public class Ventana1 {
     private JButton Boton10;
     private JButton Boton11;
     private JPasswordField PSW1;
+    private JButton borrarButton;
 
     public Ventana1() {
         PSW1.setEditable(false); // Esto evita que el usuario puedda editar el campo de la contraseña por teclado
