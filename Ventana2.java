@@ -22,5 +22,15 @@ public class Ventana2 {
                 saldo.setVisible(true);
             }
         });
+        retiroRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame retiro = new JFrame("Retirar saldo de tu cuenta");
+                retiro.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+                retiro.setSize(300, 300);
+                retiro.setContentPane(new Ventana5().Ventana5);
+                retiro.setVisible(true);
+            }
+        });
     }
 }
