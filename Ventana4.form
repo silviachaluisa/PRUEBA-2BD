@@ -19,16 +19,6 @@
           <text value="Imformacion del saldo:"/>
         </properties>
       </component>
-      <component id="223cc" class="javax.swing.JButton" binding="BotonMenu1">
-        <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <autoscrolls value="true"/>
-          <background color="-9444011"/>
-          <text value="Menu"/>
-        </properties>
-      </component>
       <component id="7ce7b" class="javax.swing.JLabel" binding="mostrarsaldo">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
@@ -36,6 +26,16 @@
         <properties>
           <enabled value="true"/>
           <text value="Mostrar saldo"/>
+        </properties>
+      </component>
+      <component id="223cc" class="javax.swing.JButton" binding="BotonMenu1">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <autoscrolls value="true"/>
+          <background color="-9444011"/>
+          <text value="Cerrar"/>
         </properties>
       </component>
     </children>

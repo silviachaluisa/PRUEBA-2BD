@@ -78,7 +78,7 @@
         </constraints>
         <properties>
           <background color="-12274638"/>
-          <text value="Menu"/>
+          <text value="Cerrar"/>
         </properties>
       </component>
       <component id="202f1" class="javax.swing.JLabel">

@@ -162,7 +162,7 @@
         </constraints>
         <properties>
           <background color="-13323233"/>
-          <text value="Menú"/>
+          <text value="Cerrar"/>
         </properties>
       </component>
     </children>
