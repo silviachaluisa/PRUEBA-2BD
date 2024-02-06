@@ -6,7 +6,7 @@ public class Ventana3 {
     JPanel Ventana3;
     private JButton BotonOk;
 
-    public Ventana3() {
+    public Ventana3() {//Constructor de la clase ventana
         BotonOk.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

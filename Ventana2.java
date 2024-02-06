@@ -12,16 +12,16 @@ public class Ventana2 {
     private Datos_bancarios db;
 
 
-    public Ventana2(Datos_bancarios info) {
-        db=info;
-        verSaldoRadioButton.addActionListener(new ActionListener() {
+    public Ventana2(Datos_bancarios info) { //Constructo de la clase:Ventana2, que recibe un objeto Datos_bancarios llamado info como parametro
+        db=info; //se asigna el objeto info al campo db de la clase Ventana2
+        verSaldoRadioButton.addActionListener(new ActionListener() { //Se da Funcionalidad al boton
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame saldo = new JFrame("Saldo de tu cuenta");
+                JFrame saldo = new JFrame("Saldo de tu cuenta"); //Se crea una nueva instancia
                 saldo.setResizable(false); // Evitar que la ventana se pueda cambiar de tamaño
                 saldo.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE); // Para no permitir el cierre de la ventana
                 saldo.setSize(300, 300);
-                saldo.setContentPane(new Ventana4(db).Ventana4);
+                saldo.setContentPane(new Ventana4(db).Ventana4);//Se establece el contenido de la ventana como una nueva instancia de Ventana 4
                 saldo.setVisible(true);
             }
         });
@@ -36,6 +36,7 @@ public class Ventana2 {
                 retiro.setVisible(true);
             }
         });
+
         depositoRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

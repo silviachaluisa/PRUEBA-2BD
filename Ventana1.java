@@ -121,7 +121,8 @@ public class Ventana1 {
                 char[] passwordChars = PSW1.getPassword();
                 if (passwordChars.length > 0) { // Verificar si hay al menos un carácter para borrar
                     char[] newPasswordChars = new char[passwordChars.length - 1]; // Crear un nuevo array sin el último carácter
-                    System.arraycopy(passwordChars, 0, newPasswordChars, 0, newPasswordChars.length);
+                    System.arraycopy(passwordChars, 0, newPasswordChars, 0, newPasswordChars.length); //Copia los caracteres de la contraseña original al nuevo array, menos el ultimo
+                    // carater, y se obtiene una nueva contraseña que es igual a la original menos uno
                     PSW1.setText(new String(newPasswordChars)); // Establecer el nuevo array como la nueva contraseña
                 }
                //PSW1.setText(""); //Borrar toda la contraseña escrita
